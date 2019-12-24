@@ -131,6 +131,32 @@
           padding: 8px 12px
           img
             margin-right: 7px
+//menu
+.header-main
+  position: fixed
+  width: 100vw
+  left: 0
+  top: 0
+  z-index: 50
+  background-color: #fff
+  transition: 0.5s
+  transform: translateY(-150%)
+  ul
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+      a
+        display: flex
+        padding: 15px 10px
+        transition: 0.3s
+        &:hover
+          transition: 0.3s
+          background-color: $main
+          color: #fff
+.main-active
+  transition: 0.5s
+  transform: translateY(0%)
 //features
 .features
   background-image: url(../img/features/bg.jpg)
@@ -138,7 +164,9 @@
   background-size: cover
   padding: 50px 0
   padding-bottom: 100px
+  position: relative
   &-wrap
+    
     h2
       display: flex
       flex-direction: column
@@ -181,6 +209,69 @@
         img
           max-width: 100%
           max-height: 160px
+//features-popup
+.features-popup
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 100%
+  height: 100%
+  transform: translate(-50%, -50%)
+  background-color: rgba(0,0,0,0.5)
+  display: none
+  align-items: center
+  justify-content: center
+  div.wrap
+    background-color: #fff
+    padding: 20px
+    max-width: 500px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    padding-top: 30px
+    h3
+      font-size: 20px
+      margin-bottom: 10px
+    p
+      font-size: 14px
+      line-height: 16px
+      margin-bottom: 10px
+    b
+      font-size: 14px
+      display: flex
+      margin-bottom: 15px
+    strong 
+      margin: 10px 0
+    span
+      color: $main
+    div.form
+      margin-top: 20px
+      input
+        border: none
+        border-radius: 8px
+        padding: 15px
+      input[type="email"]
+        box-shadow: 0 0 5px rgba(0,0,0,0.4)
+      input[type="submit"]
+        padding: 15px 30px
+        font-family: 'bold'
+        margin-left: 10px
+        margin-bottom: 20px
+      div.checkbox
+        font-size: 12px
+        a
+          text-decoration: underline
+.features-popup-active
+  display: flex
+.close-feat
+  position: absolute
+  top: 5px
+  right: 10px
+  font-size: 30px
+  color: #000
+  font-family: 'bold'
+  cursor: pointer
 //types
 .types
   background-image: url(../img/cust.jpg)         
@@ -783,7 +874,97 @@
             
             img
               margin-right: 10px
+//popup
+.overlay
+  position: fixed
+  z-index: 80
+  background-color: rgba(0,0,0,0.4)
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  display: none
+  transform: translateX(500%)
+  transition: 0.8s
 
+.popup-pdf
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-500%, -50%)
+  z-index: 90
+  display: none
+  flex-direction: column
+  max-width: 320px
+  padding: 20px
+  background-color: $main
+  border-radius: 10px
+  transition: 0.8s
+  div.close
+    position: absolute
+    right: 5px
+    top: 5px
+    font-size: 28px
+    color: #fff
+    cursor: pointer
+  h3
+    text-align: center
+    font-size: 20px
+    color: #fff
+    line-height: 22px
+    margin-bottom: 15px
+  p
+    text-align: center
+    margin-bottom: 15px
+    color: #fff
+  input
+    border: none
+    border-radius: 5px
+    padding: 15px
+  input[type="submit"]
+    margin: 10px 0
+    font-family: 'bold'
+  label
+    color: #fff
+  div.checkbox
+    margin-top: 10px
+    text-align: center
+    label
+      color: #000000
+      font-size: 12px
+    a
+      text-decoration: underline
+#thx
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -500%)
+  transition: 0.8s
+  background-color: $main
+  border-radius: 10px
+  padding: 20px
+  img
+    max-width: 90px
+  max-width: 300px
+  display: flex
+  flex-direction: column
+  align-items: center
+  h4
+    text-align: center
+    color: #ffffff
+    font-size: 20px
+    line-height: 22px
+    margin: 20px 0
+  p
+    color: #ffffff
+    text-align: center
+.overlay-active
+  transform: translate(0)
+  transition: 0.8s
+
+.popup-active
+  transform: translate(-50%, -50%)
+  transition: 0.8s
 
 
 

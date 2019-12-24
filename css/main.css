@@ -343,12 +343,61 @@ h1, h2, h3, h4, h5 {
   margin-right: 7px;
 }
 
+.header-main {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+
+.header-main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-main ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-main ul li a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #00c1ac;
+  color: #fff;
+}
+
+.main-active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 .features {
   background-image: url(../img/features/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
   padding-bottom: 100px;
+  position: relative;
 }
 
 .features-wrap h2 {
@@ -438,6 +487,115 @@ h1, h2, h3, h4, h5 {
 .features-wrap-container-item img {
   max-width: 100%;
   max-height: 160px;
+}
+
+.features-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-popup div.wrap {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  padding-top: 30px;
+}
+
+.features-popup div.wrap h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.features-popup div.wrap p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+
+.features-popup div.wrap b {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.features-popup div.wrap strong {
+  margin: 10px 0;
+}
+
+.features-popup div.wrap span {
+  color: #00c1ac;
+}
+
+.features-popup div.wrap div.form {
+  margin-top: 20px;
+}
+
+.features-popup div.wrap div.form input {
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.features-popup div.wrap div.form input[type="email"] {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.features-popup div.wrap div.form input[type="submit"] {
+  padding: 15px 30px;
+  font-family: 'bold';
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.features-popup div.wrap div.form div.checkbox {
+  font-size: 12px;
+}
+
+.features-popup div.wrap div.form div.checkbox a {
+  text-decoration: underline;
+}
+
+.features-popup-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.close-feat {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 30px;
+  color: #000;
+  font-family: 'bold';
+  cursor: pointer;
 }
 
 .types {
@@ -1521,15 +1679,240 @@ h1, h2, h3, h4, h5 {
   margin-right: 10px;
 }
 
+.overlay {
+  position: fixed;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  -webkit-transform: translateX(500%);
+          transform: translateX(500%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.popup-pdf {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-500%, -50%);
+          transform: translate(-500%, -50%);
+  z-index: 90;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 320px;
+  padding: 20px;
+  background-color: #00c1ac;
+  border-radius: 10px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.popup-pdf div.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popup-pdf h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.popup-pdf p {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.popup-pdf input {
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.popup-pdf input[type="submit"] {
+  margin: 10px 0;
+  font-family: 'bold';
+}
+
+.popup-pdf label {
+  color: #fff;
+}
+
+.popup-pdf div.checkbox {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.popup-pdf div.checkbox label {
+  color: #000000;
+  font-size: 12px;
+}
+
+.popup-pdf div.checkbox a {
+  text-decoration: underline;
+}
+
+#thx {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -500%);
+          transform: translate(-50%, -500%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  background-color: #00c1ac;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#thx img {
+  max-width: 90px;
+}
+
+#thx h4 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 20px 0;
+}
+
+#thx p {
+  color: #ffffff;
+  text-align: center;
+}
+
+.overlay-active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.popup-active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
 @media (max-width: 1199px) {
-  body {
+  .header-main-wrap ul li a {
+    font-size: 13px;
+  }
+  .features-wrap-container-item {
+    min-height: 360px;
+  }
+  .types {
+    background-image: none;
+    background-color: #f2f2f2;
+    min-height: 600px;
+    padding: 50px 0;
+  }
+  .release {
+    background-image: none;
     background-color: #fff;
+    padding: 30px 0;
+  }
+  .footer {
+    background-image: none;
+    background-color: #f2f2f2;
+    padding: 30px 0;
+  }
+  .features {
+    padding: 30px 0;
+  }
+  .blog-wrap-center-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog-wrap-center-left img {
+    max-width: 250px;
   }
 }
 
 @media (max-width: 992px) {
-  body {
-    background-color: #fff;
+  .header-main-wrap ul li a {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+  .features-wrap-container-item {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .release-wrap-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-wrap-bot-left {
+    margin-right: 20px;
+  }
+  .header-wrap-bot-right {
+    padding: 20px;
+  }
+  .release-wrap-item-left {
+    margin-right: 0;
+    padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .release-wrap button.slick-prev {
+    top: 630px;
+    left: 440px;
+  }
+  .release-wrap button.slick-next {
+    top: 630px;
+    left: 490px;
+  }
+  .release-wrap-item-left-center {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .release-wrap-item-left-top h3 {
+    max-width: 80%;
   }
 }
 
