@@ -132,7 +132,7 @@ input[type="email"] {
   -webkit-appearance: none;
 }
 
-input[type="select"] {
+#lol {
   -webkit-appearance: none;
 }
 
@@ -2347,6 +2347,12 @@ input[type="select"] {
 }
 
 @media (max-width: 440px) {
+  .free-wrap-bot-form div input[type="submit"] {
+    width: 100%;
+  }
+  .free-wrap-bot-form div input[type="checkbox"] {
+    padding: 3px;
+  }
   #email1 {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
