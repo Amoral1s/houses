@@ -15,19 +15,53 @@ $(document).ready(function () {
     arrows: true
  
   });
+  if ($(window).width() < 768) {
+    $('.ethaps-wrap-center').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false,
+      arrows: true
+    });
 
-
-  $(window).bind('scroll', function() { 
-    var top = $(document).scrollTop();
-    if (top > 70) {
-      $('.header-main').addClass('main-active');
-     }
-    else {
-      $('.header-main').removeClass('main-active');
-      
-     }
+  }
+  if ($(window).width() > 768) {
+    $(window).bind('scroll', function() { 
+      var top = $(document).scrollTop();
+      if (top > 70) {
+        $('.header-main').addClass('main-active');
+        $('.toggle-mob').addClass('tog-active');
+       }
+      else {
+        $('.header-main').removeClass('main-active');
+        $('.toggle-mob').removeClass('tog-active');
+       }
+    });
+  } else {
+    $('.toggle-mob').on('click', () => {
+      $('.toggle-mob').toggleClass('toggle-mob-active');
+      $('#mob-menu').slideToggle(500);
+    });
+    $('#mob-menu ul li a').on('click', (e) => {
+      $('.toggle-mob').toggleClass('toggle-mob-active');
+      $('#mob-menu').slideToggle(500);
+    });
     
-  });
+
+    $(window).bind('scroll', function() { 
+      var top = $(document).scrollTop();
+      if (top > 70) {
+        $('.toggle-mob').addClass('tog-active');
+       }
+      else {
+        $('.toggle-mob').removeClass('tog-active');
+       }
+    });
+  }
+  
+
+
+  
 
   const overlay = document.querySelector('.overlay'),
         popupPdf = document.querySelector('.popup-pdf'),
