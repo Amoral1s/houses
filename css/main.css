@@ -128,10 +128,6 @@ input[type="text"] {
   -webkit-appearance: none;
 }
 
-input {
-  -webkit-appearance: none;
-}
-
 .button {
   background-color: #fed162;
   padding: 10px;
@@ -2339,6 +2335,17 @@ input {
 }
 
 @media (max-width: 440px) {
+  div.checkbox {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
   .features-popup div.wrap div.form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2438,7 +2445,7 @@ input {
     min-width: 320px;
   }
   .popup-pdf {
-    min-width: 300px;
+    min-width: 320px;
   }
   .popup-pdf h3 {
     font-size: 18px;
