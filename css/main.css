@@ -120,6 +120,18 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+}
+
+input[type="email"] {
+  -webkit-appearance: none;
+}
+
 .button {
   background-color: #fed162;
   padding: 10px;
