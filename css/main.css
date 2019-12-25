@@ -128,6 +128,10 @@ input[type="text"] {
   -webkit-appearance: none;
 }
 
+input[type="select"] {
+  -webkit-appearance: none;
+}
+
 .button {
   background-color: #fed162;
   padding: 10px;
