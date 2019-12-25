@@ -2347,6 +2347,10 @@ input[type="select"] {
 }
 
 @media (max-width: 440px) {
+  #email1 {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
   .features-popup div.wrap div.form input {
     border: 1px solid #000;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
