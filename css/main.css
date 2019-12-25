@@ -2347,6 +2347,10 @@ input[type="email"] {
 }
 
 @media (max-width: 440px) {
+  a.button {
+    font-size: 14px !important;
+    font-family: 'bold';
+  }
   .free-wrap-bot-form div input[type="submit"] {
     width: 100%;
   }
