@@ -1841,6 +1841,10 @@ input[type="select"] {
   display: none;
 }
 
+.features-popup, .features-popup p, .features-popup b, .features-popup strong {
+  font-size: 16px !important;
+}
+
 @media (max-width: 1199px) {
   .header-main-wrap ul li a {
     font-size: 13px;
@@ -2339,6 +2343,9 @@ input[type="select"] {
 }
 
 @media (max-width: 440px) {
+  .features-popup, .features-popup p, .features-popup b, .features-popup strong {
+    font-size: 14px !important;
+  }
   .popup-pdf input {
     padding: 20px;
   }
