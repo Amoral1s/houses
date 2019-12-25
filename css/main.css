@@ -2343,6 +2343,15 @@ input[type="select"] {
 }
 
 @media (max-width: 440px) {
+  .features-popup div.wrap div.form input {
+    min-width: 300px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+  }
+  .features-popup div.wrap div.form input[type="checkbox"] {
+    margin-right: 10px;
+    min-width: auto;
+  }
   .features-popup, .features-popup p, .features-popup b, .features-popup strong {
     font-size: 14px !important;
   }
