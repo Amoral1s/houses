@@ -1971,6 +1971,10 @@ input[type="email"] {
   padding: 40px;
 }
 
+.page-content-wrap h2 {
+  line-height: 34px;
+}
+
 .page-content-wrap p {
   margin: 15px 0;
   font-size: 16px;
@@ -2866,6 +2870,10 @@ input[type="email"] {
 }
 
 @media (max-width: 578px) {
+  .projects-wrap-item-wrap-text div h3 {
+    margin-left: 0;
+    padding-left: 0;
+  }
   .projects-wrap h1 {
     line-height: 32px;
   }
