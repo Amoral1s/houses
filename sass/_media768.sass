@@ -1,4 +1,14 @@
 @media (max-width: 768px)
+  .page-content
+    div.blog-wrap-center-right-buttons
+      margin-top: 30px
+      a.button
+        width: 260px
+        display: flex
+        justify-content: center
+        align-items: center
+  .header-main-page
+    display: none
   #toggle
     display: flex
   .toggle-mob
@@ -128,6 +138,18 @@
       &-center 
         h1
           margin-right: 0
+  .header-page
+    background-image: none
+    background-position: bottom right
+    padding-bottom: 0
+    &-wrap
+      &-bot
+        flex-direction: column
+        &-right
+          margin-top: 160px
+      &-center 
+        h1
+          margin-right: 0
   .release
     button.slick-prev
       left: 400px
@@ -136,6 +158,8 @@
   input[type="text"], select, input[type="submit"], input[type="email"]
     width: 320px!important
     padding: 20px!important
+  select
+    background-color: #ffffff!important
   .popup-pdf
     min-width: 360px!important
   .ethaps
