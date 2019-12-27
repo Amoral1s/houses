@@ -2337,6 +2337,10 @@ input[type="email"] {
   font-size: 18px;
 }
 
+.tranfsorm {
+  top: -300px !important;
+}
+
 @media (max-width: 1199px) {
   .features-popup div.wrap {
     max-width: 85%;
@@ -2639,6 +2643,18 @@ input[type="email"] {
 }
 
 @media (max-width: 768px) {
+  .footer-wrap-right-contacts-adress div a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .page-news-wrap-item {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
@@ -3011,7 +3027,8 @@ input[type="email"] {
         flex-basis: 100%;
   }
   .footer-wrap-left h3 {
-    font-size: 25px;
+    font-size: 28px;
+    line-height: 28px;
     text-align: center;
   }
   .footer-wrap-left p {
