@@ -111,6 +111,40 @@ $(document).ready(function () {
       popupPdf.style.display = 'none';
     }, 800);
   });
+
+  $('.feat-toggle-1').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-1').addClass('features-popup-active');
+  });
+  $('.feat-toggle-2').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-2').addClass('features-popup-active');
+  });
+  $('.feat-toggle-3').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-3').addClass('features-popup-active');
+  });
+  $('.feat-toggle-4').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-4').addClass('features-popup-active');
+  });
+  $('.feat-toggle-5').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-5').addClass('features-popup-active');
+  });
+  $('.feat-toggle-6').on('click', (e) => {
+    e.preventDefault();
+    $('.feat-6').addClass('features-popup-active');
+  });
+  $('.close-feat').on('click', (e) => {
+    e.preventDefault();
+    $('.features-popup').removeClass('features-popup-active');
+  });
+  $('.close-feat').on('click', (e) => {
+    e.preventDefault();
+    $('.features-popup').removeClass('features-popup-active');
+  });
+
   
   const featPopup1 = document.querySelectorAll('.features-popup');
   featPopup1.forEach((elem) => {
