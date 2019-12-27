@@ -2343,6 +2343,12 @@ input[type="email"] {
   top: -300px !important;
 }
 
+div.wrap b {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
 @media (max-width: 1199px) {
   .page-news-wrap-item {
     min-height: 220px;
